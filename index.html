@@ -11,26 +11,39 @@
     <title>Previsão do Tempo</title>
 </head>
 <body>
-
-    <div class="caixa-maior">
-        <input class="input-cidade" placeholder="Digite o nome da cidade">
-        <button class="botao-busca" onclick="cliqueiNoBotao()">
-            <img class="img-busca" src="https://www.svgrepo.com/show/488200/find.svg" alt="busca">
-        </button>
-
-        <div class="caixa-media">
-            <h2 class="cidade"></h2>
     
-            <p class="temp"></p>
-    
-            <div class="caixa-menor">
-            <img class="img-previsao" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
-                <p class="texto-previsao"></p>
-            </div>
-    
-            <p class="umidade"></p>
+    <div class="contentDois">
+        <div class="info-body">
+            <h2 class="cidadeDois"></h2>
+            <p class="tempDois"></p>
         </div>
     </div>
+    
+    
+    <div class="content">
+
+        <div class="caixa-maior">
+            <input class="input-cidade" placeholder="Digite o nome da cidade">
+            <button class="botao-busca" onclick="cliqueiNoBotao()">
+                <img class="img-busca" src="https://www.svgrepo.com/show/488200/find.svg" alt="busca">
+            </button>
+
+            <div class="caixa-media">
+                <h2 class="cidade"></h2>
+        
+                <p class="temp"></p>
+        
+                <div class="caixa-menor">
+                <img class="img-previsao" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
+                    <p class="texto-previsao"></p>
+                </div>
+        
+                <p class="umidade"></p>
+            </div>
+        </div>    
+    </div>
+    </div>
+    
     
     <script src="script.js"></script>
 </body>
