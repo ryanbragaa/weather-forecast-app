@@ -10,17 +10,31 @@ body {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     background-image: url("https://source.unsplash.com/1600x900/?landscape");
 }
 
+.img-fundo {
+    z-index: -1;
+}
+
+.content {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 40px;
+
+    background: rgba(31, 30, 30, 0.35);
+    backdrop-filter: blur( 0.05px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 .caixa-maior {
-    background: #000000;
-    opacity: 0.8;
-    border-radius: 25px;
-    padding: 20px;
-    width: 95%;
-    max-width: 450px;;
+    width: 100%;
+    margin-top: 130px;
 }
 
 .input-cidade {
@@ -29,17 +43,21 @@ body {
     padding: 10px;
     border-radius: 15px;
     font-size: 16px;
-    background-color: #7c7c7c2b;
-    color: #ffff;
+    background-color: #ffffff2b;
+    color: white;
     width:  calc(100% - 70px);
+}
+
+.input-cidade::placeholder {
+    color: #ffffff;
 }
 
 .botao-busca {
     border: none;
     outline: none;
-    padding: 10px;
+    padding: 10px 16px;
     border-radius: 15px;
-    background-color: #cccccc80;
+    background-color: #cccccc;
     cursor: pointer;
     float: right;
 }
@@ -49,7 +67,11 @@ body {
 }
 
 .caixa-media {
-    margin-top: 30px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cidade {
@@ -79,4 +101,50 @@ body {
 .umidade {
     color: #ffff;
     margin-top: 20px;
+}
+
+/* Alterações */
+
+.contentDois {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    /* align-items: end; */
+    /* border: 1px solid red; */
+}
+
+.info-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    font-weight: 300;
+    color: #ffffff;
+
+    /* border: 2px solid green; */
+}
+
+.tempDois {
+    font-size: 80px;
+    margin-top: 20px;
+
+    background: rgba(31, 30, 30, 0.35);
+    backdrop-filter: blur( 0.05px );
+    border-radius: 10px;
+    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    /* background-color: #57575750;
+    border-radius: 5px; */
+
+}
+
+.cidadeDois {
+    font-size: 80px;
+
+    background: rgba(31, 30, 30, 0.35);
+    backdrop-filter: blur( 0.05px );
+    border-radius: 10px;
+
 }
