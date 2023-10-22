@@ -14,12 +14,8 @@ body {
     background-image: url("https://source.unsplash.com/1600x900/?landscape");
 }
 
-.img-fundo {
-    z-index: -1;
-}
-
 .content {
-    width: 50vw;
+    flex: 0.50;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
@@ -27,8 +23,8 @@ body {
     padding: 40px;
 
     background: rgba(31, 30, 30, 0.35);
-    backdrop-filter: blur( 0.05px );
-    border-radius: 10px;
+    backdrop-filter: blur( 7.15px );
+    border-radius: 25px 0px 0px 25px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
@@ -40,8 +36,8 @@ body {
 .input-cidade {
     border: none;
     outline: none;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 15px;
+    border-radius: 15px 0px 0px 15px;
     font-size: 16px;
     background-color: #ffffff2b;
     color: white;
@@ -55,8 +51,8 @@ body {
 .botao-busca {
     border: none;
     outline: none;
-    padding: 10px 16px;
-    border-radius: 15px;
+    padding: 14px 25px;
+    border-radius: 0px 10px 10px 0px;
     background-color: #cccccc;
     cursor: pointer;
     float: right;
@@ -106,45 +102,33 @@ body {
 /* Alterações */
 
 .contentDois {
-    width: 50vw;
+    flex: 0.80;
     height: 100vh;
     display: flex;
-    /* align-items: end; */
-    /* border: 1px solid red; */
+    align-items: end;
+    justify-content: center;
 }
 
 .info-body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: end;
-    margin-left: 10%;
-    margin-bottom: 5%;
-    font-weight: 300;
     color: #ffffff;
-
-    /* border: 2px solid green; */
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .tempDois {
     font-size: 80px;
-    margin-top: 20px;
-
-    background: rgba(31, 30, 30, 0.35);
-    backdrop-filter: blur( 0.05px );
-    border-radius: 10px;
-    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-    /* background-color: #57575750;
-    border-radius: 5px; */
-
 }
 
-.cidadeDois {
-    font-size: 80px;
+.dataBody {
+    font-size: 20px;
+}
 
-    background: rgba(31, 30, 30, 0.35);
-    backdrop-filter: blur( 0.05px );
-    border-radius: 10px;
+.info-img-texto {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
 
 }
