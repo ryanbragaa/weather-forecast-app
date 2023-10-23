@@ -11,7 +11,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-image: url("https://source.unsplash.com/1600x900/?landscape");
+    background: url("https://source.unsplash.com/1600x900/?landscape") no-repeat center/cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /*
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    */
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, transparent 75%);
+    z-index: -1;
+}
+
+.content-principal {
+    width: 100vw;
+    display: flex;
 }
 
 .content {
@@ -19,9 +38,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: flex-end;
-
     padding: 40px;
-
     background: rgba(31, 30, 30, 0.35);
     backdrop-filter: blur( 7.15px );
     border-radius: 25px 0px 0px 25px;
@@ -111,7 +128,7 @@ body {
 
 .info-body {
     color: #ffffff;
-    gap: 16px;
+    gap: 0px 16px ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,6 +146,27 @@ body {
 .info-img-texto {
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+}
 
+@media screen and (max-width: 768px) {
+    .content-principal {
+        flex-direction: column-reverse;
+        font-size: 10px;
+        height: 100vh;
+    }
+    .content, .dataBody {
+        border-radius: 15px;
+        font-size: 10px;
+    }
+    .contentDois {
+       align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info-body {
+        flex-direction: column;
+        text-align: center;
+    }
 }
