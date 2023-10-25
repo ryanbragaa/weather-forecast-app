@@ -11,27 +11,64 @@
     <title>Previsão do Tempo</title>
 </head>
 <body>
-
-    <div class="caixa-maior">
-        <input class="input-cidade" placeholder="Digite o nome da cidade">
-        <button class="botao-busca" onclick="cliqueiNoBotao()">
-            <img class="img-busca" src="https://www.svgrepo.com/show/488200/find.svg" alt="busca">
-        </button>
-
-        <div class="caixa-media">
-            <h2 class="cidade"></h2>
     
-            <p class="temp"></p>
-    
-            <div class="caixa-menor">
-            <img class="img-previsao" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
-                <p class="texto-previsao"></p>
-            </div>
-    
-            <p class="umidade"></p>
+    <div class="content-principal">
+        <div class="nome-aplication">
+            <h1>weather.app</h1>
         </div>
+       
+
+        <div class="contentDois">
+
+            <div class="info-body">
+
+                <p class="tempDois"></p>
+                <div class="dataBody">
+                    <h2 class="cidadeDois"></h2> 
+                    <p class="dataDeHoje"></p>
+                </div>
+                <div class="info-img-texto">
+                    <img class="img-previsaoDois" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
+                    <p class="texto-previsaoDois"></p>
+                </div>
+
+            </div>
+
+        </div>
+        
+        
+        <div class="content">
+
+            <div class="caixa-maior">
+
+                <input class="input-cidade" placeholder="Digite o nome da cidade">
+                <button class="botao-busca" onclick="cliqueiNoBotao()">
+                    <img class="img-busca" src="https://www.svgrepo.com/show/488200/find.svg" alt="busca">
+                </button>
+
+                <div class="caixa-media">
+                    <div class="icone-e-cidade">
+                        <img class="icone-de-loc"src="./images/location.svg" alt="icone de localização"><h2 class="cidade"></h2> 
+                    </div>
+                    <div class="icone-e-temp">
+                       <img class="icon-temperatura" src="./images/thermometer.svg" alt=""> <p class="temp"></p>
+                    </div>
+            
+                    <div class="caixa-menor">
+                        <img class="img-previsao" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
+                            <p class="texto-previsao"></p>
+                    </div>
+                    <div class="water-umidade">
+                        <img class="icone-water" src="./images/water.svg" alt=""><p class="umidade"></p>
+                    </div>
+                </div>
+
+            </div>   
+
+        </div>
+
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
