@@ -38,7 +38,10 @@ const key = "56aa5617ec6ff9c66775c95cd158c21a";
 
 
 function colocarDadosNaTela(dados) {
-    
+
+    document.querySelector(".info-body").style.display = "flex"
+    document.querySelector(".caixa-media").style.display = "flex"
+
     document.querySelector(".cidade").innerHTML = "Tempo em " + dados.name
     document.querySelector(".temp").innerHTML = Math.floor(dados.main.temp) + "°C"
     document.querySelector(".texto-previsao").innerHTML = dados.weather[0].description
