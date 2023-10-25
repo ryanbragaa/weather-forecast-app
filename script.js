@@ -42,7 +42,7 @@ function colocarDadosNaTela(dados) {
     document.querySelector(".info-body").style.display = "flex"
     document.querySelector(".caixa-media").style.display = "flex"
 
-    document.querySelector(".cidade").innerHTML = "Tempo em " + dados.name
+    document.querySelector(".cidade").innerHTML ="Tempo em " + dados.name
     document.querySelector(".temp").innerHTML = Math.floor(dados.main.temp) + "°C"
     document.querySelector(".texto-previsao").innerHTML = dados.weather[0].description
     document.querySelector(".umidade").innerHTML = "Umidade: " + dados.main.humidity + "%"
@@ -66,6 +66,15 @@ async function buscarCidade(cidade) {
     colocarDadosNaTela(dados);
 }
 
+
+const input = document.querySelector(".input-cidade");
+
+input.addEventListener("keyup", function(event){
+    if(event.keyCode === 13) {
+        const cidade = document.querySelector(".input-cidade").value;
+        buscarCidade(cidade);
+    }
+}) 
 
 function cliqueiNoBotao() {
     const cidade = document.querySelector(".input-cidade").value;
