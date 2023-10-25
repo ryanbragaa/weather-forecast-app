@@ -98,7 +98,6 @@ body::before {
 .temp {
     font-size: 20px;
     color: #ffff;
-    margin-top: 20px;
 }
 
 .caixa-menor {
@@ -115,7 +114,6 @@ body::before {
 
 .umidade {
     color: #ffff;
-    margin-top: 20px;
 }
 
 /* Alterações */
@@ -155,7 +153,47 @@ body::before {
     align-items: center;
 }
 
+.icone-e-cidade {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
+.icone-de-loc {
+    flex-direction: row;
+    height: 25px;
+    color: red;
+}
+
+.nome-aplication {
+    position: absolute;   
+    color: #7e7878;
+    font-size: 10px;
+    margin: 10px 0px 0px 30px ;
+}
+
+.water-umidade {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.icone-water {
+    height: 20px;
+}
+
+.icone-e-temp {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 4px;
+}
+
+.icon-temperatura {
+    height: 20px;
+}
 
 /* hover */
 
@@ -181,12 +219,29 @@ body::before {
     .contentDois {
        align-items: center;
     }
+    .nome-aplication {
+        margin-left: 30px;
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .info-body {
         flex-direction: column;
         text-align: center;
+    }
+    .icone-e-cidade {
+        flex-direction: column;
+    }
+    .cidade {
+        font-size: 20px;
+    }
+    .caixa-media {
+        margin-top: 0;
+    }
+    .nome-aplication {
+        margin-left: 30px;
+        margin-bottom: 10px;
     }
 }
 /* -- */
@@ -199,9 +254,9 @@ body::before {
         margin-top: 110px;
         height: 30px;
     }
-    /* 50% {
-        height: 150px;
-    } */
+    50% {
+        height: 100px;
+    }
     100% {
         /* margin-top: 130px; */
         height: 300px;
