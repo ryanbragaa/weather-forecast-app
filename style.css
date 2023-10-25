@@ -251,11 +251,7 @@ body::before {
 
 @keyframes slidecaixamedia {
     0% {
-        margin-top: 110px;
-        height: 30px;
-    }
-    50% {
-        height: 100px;
+        height: 120px;
     }
     100% {
         /* margin-top: 130px; */
