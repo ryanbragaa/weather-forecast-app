@@ -43,7 +43,6 @@ body::before {
     backdrop-filter: blur( 7.15px );
     border-radius: 10px 0px 0px 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-
     animation: slidecontent 3s;
 }
 
@@ -88,10 +87,8 @@ body::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     display: none;
     height: 300px;
-
     animation: slidemedium-box 3s;
 }
 
@@ -139,11 +136,8 @@ body::before {
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-
     opacity: 1;
-
     animation: opacity 3s;
-    
 }
 
 .temp-one {
@@ -219,11 +213,11 @@ body::before {
         font-size: 10px;
         height: 100vh;
     }
-    .section-two, .date-one {
+    .section-one, .date-one {
         border-radius: 15px;
         font-size: 10px;
     }
-    .section-two {
+    .section-one {
        align-items: center;
     }
     .application-name {
@@ -254,7 +248,7 @@ body::before {
 /* -- */
 
 
-/* animações */
+/* animation */
 
 @keyframes slidemedium-box {
     0% {
