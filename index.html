@@ -8,29 +8,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Previsão do Tempo</title>
+    <title>Weather App</title>
 </head>
 <body>
-    <img class="img-fundo" src="https://source.unsplash.com/1600x900/?landscape" alt="" type="image/webp">
+    <img class="image-background" src="https://source.unsplash.com/1600x900/?landscape" alt="" type="image/webp">
     
-    <div class="content-principal">
-        <div class="nome-aplication">
+    <div class="content-main">
+        <div class="application-name">
             <h1>weather.app</h1>
         </div>
        
 
-        <div class="contentDois">
+        <div class="section-one">
 
             <div class="info-body">
 
-                <p class="tempDois"></p>
-                <div class="dataBody">
-                    <h2 class="cidadeDois"></h2> 
-                    <p class="dataDeHoje"></p>
+                <p class="temp-one"></p>
+                <div class="date-one">
+                    <h2 class="city-one"></h2> 
+                    <p class="current-date"></p>
                 </div>
-                <div class="info-img-texto">
-                    <img class="img-previsaoDois" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
-                    <p class="texto-previsaoDois"></p>
+                <div class="info-img-text">
+                    <img class="img-prediction-one" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
+                    <p class="prediction-text-one"></p>
                 </div>
 
             </div>
@@ -38,29 +38,29 @@
         </div>
         
         
-        <div class="content">
+        <div class="section-two">
 
-            <div class="caixa-maior">
+            <div class="bigger-box">
 
-                <input class="input-cidade" placeholder="Digite o nome da cidade">
-                <button class="botao-busca" onclick="cliqueiNoBotao()">
-                    <img class="img-busca" src="https://www.svgrepo.com/show/488200/find.svg" alt="busca">
+                <input class="search-city" placeholder="Digite o nome da cidade">
+                <button class="search-button" onclick="iClickedSearch()">
+                    <img class="img-search" src="https://www.svgrepo.com/show/488200/find.svg" alt="search">
                 </button>
 
-                <div class="caixa-media">
-                    <div class="icone-e-cidade">
-                        <img class="icone-de-loc"src="./images/location.svg" alt="icone de localização"><h2 class="cidade"></h2> 
+                <div class="medium-box">
+                    <div class="icon-and-city">
+                        <img class="local-icon"src="./images/location.svg" alt="location icon"><h2 class="city"></h2> 
                     </div>
-                    <div class="icone-e-temp">
-                       <img class="icon-temperatura" src="./images/thermometer.svg" alt=""> <p class="temp"></p>
+                    <div class="temperature-division">
+                       <img class="temperature-icon" src="./images/thermometer.svg" alt=""> <p class="temp"></p>
                     </div>
             
-                    <div class="caixa-menor">
-                        <img class="img-previsao" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
-                            <p class="texto-previsao"></p>
+                    <div class="smaller-box">
+                        <img class="img-prediction" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
+                            <p class="predictive-text"></p>
                     </div>
-                    <div class="water-umidade">
-                        <img class="icone-water" src="./images/water.svg" alt=""><p class="umidade"></p>
+                    <div class="moisture-division">
+                        <img class="water-icon" src="./images/water.svg" alt=""><p class="moisture"></p>
                     </div>
                 </div>
 

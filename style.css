@@ -5,7 +5,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.img-fundo {
+.image-background {
     width: 100vw;
     height: 100vh;
     z-index: -100;
@@ -28,12 +28,12 @@ body::before {
     z-index: -1;
 }
 
-.content-principal {
+.content-main {
     width: 100vw;
     display: flex;
 }
 
-.content {
+.section-two {
     flex: 0.50;
     height: 100vh;
     display: flex;
@@ -47,12 +47,12 @@ body::before {
     animation: slidecontent 3s;
 }
 
-.caixa-maior {
+.bigger-box {
     width: 100%;
     margin-top: 130px;
 }
 
-.input-cidade {
+.search-city {
     border: none;
     outline: none;
     padding: 15px;
@@ -63,11 +63,11 @@ body::before {
     width:  calc(100% - 70px);
 }
 
-.input-cidade::placeholder {
+.search-city::placeholder {
     color: #ffffff;
 }
 
-.botao-busca {
+.search-button {
     border: none;
     outline: none;
     padding: 14px 25px;
@@ -78,11 +78,11 @@ body::before {
     float: right;
 }
 
-.img-busca {
+.img-search {
     width: 20px;
 }
 
-.caixa-media {
+.medium-box {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -92,10 +92,10 @@ body::before {
     display: none;
     height: 300px;
 
-    animation: slidecaixamedia 3s;
+    animation: slidemedium-box 3s;
 }
 
-.cidade {
+.city {
     color: #ffff;
     font-size: 25px;
     font-weight: 300;
@@ -106,25 +106,25 @@ body::before {
     color: #ffff;
 }
 
-.caixa-menor {
+.smaller-box {
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
 
-.texto-previsao {
+.predictive-text {
     color: #ffff;
     margin-left: 20px;
     text-transform: capitalize;
 }
 
-.umidade {
+.moisture{
     color: #ffff;
 }
 
 /* Alterações */
 
-.contentDois {
+.section-one {
     flex: 0.80;
     height: 100vh;
     display: flex;
@@ -142,43 +142,43 @@ body::before {
 
     opacity: 1;
 
-    animation: opacidade 3s;
+    animation: opacity 3s;
     
 }
 
-.tempDois {
+.temp-one {
     font-size: 80px;
 }
 
-.dataBody {
+.date-one {
     font-size: 20px;
 }
 
-.info-img-texto {
+.info-img-text {
     display: flex;
     align-items: center;
 }
 
-.icone-e-cidade {
+.icon-and-city {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.icone-de-loc {
+.local-icon {
     flex-direction: row;
     height: 25px;
     color: red;
 }
 
-.nome-aplication {
+.application-name {
     position: absolute;   
     color: #7e7878;
     font-size: 10px;
     margin: 10px 0px 0px 30px ;
 }
 
-.water-umidade {
+.moisture-division {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -186,24 +186,24 @@ body::before {
     gap: 4px;
 }
 
-.icone-water {
+.water-icon {
     height: 20px;
 }
 
-.icone-e-temp {
+.temperature-division{
     display: flex;
     align-items: center;
     margin-top: 20px;
     gap: 4px;
 }
 
-.icon-temperatura {
+.temperature-icon {
     height: 20px;
 }
 
 /* hover */
 
-.botao-busca:hover {
+.search-button:hover {
     background-color: #ffffff;
 }
 
@@ -211,21 +211,22 @@ body::before {
 /* -- */
 
 
+
 /* medias */
 @media screen and (max-width: 768px) {
-    .content-principal {
+    .content-main {
         flex-direction: column-reverse;
         font-size: 10px;
         height: 100vh;
     }
-    .content, .dataBody {
+    .section-two, .date-one {
         border-radius: 15px;
         font-size: 10px;
     }
-    .contentDois {
+    .section-two {
        align-items: center;
     }
-    .nome-aplication {
+    .application-name {
         margin-left: 30px;
         margin-bottom: 15px;
     }
@@ -236,16 +237,16 @@ body::before {
         flex-direction: column;
         text-align: center;
     }
-    .icone-e-cidade {
+    .icon-and-city {
         flex-direction: column;
     }
-    .cidade {
+    .city {
         font-size: 20px;
     }
-    .caixa-media {
+    .medium-box {
         margin-top: 0;
     }
-    .nome-aplication {
+    .application-name {
         margin-left: 30px;
         margin-bottom: 10px;
     }
@@ -255,7 +256,7 @@ body::before {
 
 /* animações */
 
-@keyframes slidecaixamedia {
+@keyframes slidemedium-box {
     0% {
         height: 120px;
     }
@@ -277,7 +278,7 @@ body::before {
 
 }
 
-@keyframes opacidade {
+@keyframes opacity {
     0%{
         opacity: 0;
     }

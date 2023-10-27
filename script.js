@@ -1,6 +1,6 @@
-let data = new Date();
+let date = new Date();
 
-const mesesDoAno = [
+const monthsOfTheYear = [
     "Janeiro",
     "Fevereiro",
     "Março",
@@ -15,7 +15,7 @@ const mesesDoAno = [
     "Dezembro"
 ];
 
-const diasDaSemana = [
+const daysOfTheWeek = [
     "Domingo",
     "Segunda-feira",
     "Terça-feira",
@@ -25,61 +25,61 @@ const diasDaSemana = [
     "Sábado"
 ];
 
-let ano = data.getFullYear();
+let year = date.getFullYear();
 
-let diaMes = data.getDate();
+let dayMonth = date.getDate();
 
-let mesEscrito = mesesDoAno[data.getMonth()];
+let writtenMonth = monthsOfTheYear[date.getMonth()];
 
-let diaSemanaEscrito = diasDaSemana[data.getDay()];
+let dayWeekWritten = daysOfTheWeek[date.getDay()];
 
 
 const key = "56aa5617ec6ff9c66775c95cd158c21a";
 
 
-function colocarDadosNaTela(dados) {
+function putDataOnScreen(data) {
 
     document.querySelector(".info-body").style.display = "flex"
-    document.querySelector(".caixa-media").style.display = "flex"
+    document.querySelector(".medium-box").style.display = "flex"
 
-    document.querySelector(".cidade").innerHTML ="Tempo em " + dados.name
-    document.querySelector(".temp").innerHTML = Math.floor(dados.main.temp) + "°C"
-    document.querySelector(".texto-previsao").innerHTML = dados.weather[0].description
-    document.querySelector(".umidade").innerHTML = "Umidade: " + dados.main.humidity + "%"
-    document.querySelector(".img-previsao").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
+    document.querySelector(".city").innerHTML ="Tempo em " + data.name
+    document.querySelector(".temp").innerHTML = Math.floor(data.main.temp) + "°C"
+    document.querySelector(".predictive-text").innerHTML = data.weather[0].description
+    document.querySelector(".moisture").innerHTML = "Umidade: " + data.main.humidity + "%"
+    document.querySelector(".img-prediction").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
 
     
-    document.querySelector(".cidadeDois").innerHTML = dados.name
-    document.querySelector(".tempDois").innerHTML = Math.floor(dados.main.temp) + "°C"
-    document.querySelector(".img-previsaoDois").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
-    document.querySelector(".texto-previsaoDois").innerHTML = dados.weather[0].description
+    document.querySelector(".city-one").innerHTML = data.name
+    document.querySelector(".temp-one").innerHTML = Math.floor(data.main.temp) + "°C"
+    document.querySelector(".img-prediction-one").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+    document.querySelector(".prediction-text-one").innerHTML = data.weather[0].description
 
-    document.querySelector(".dataDeHoje").innerHTML =  diaSemanaEscrito + ", " + diaMes+ ", " +  mesEscrito+ ", " + ano;
+    document.querySelector(".current-date").innerHTML =  dayWeekWritten + ", " + dayMonth + ", " +  writtenMonth + ", " + year;
 
 
 }
 
 
-async function buscarCidade(cidade) {
-    const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br&units=metric`).then( resposta => resposta.json())
+async function searchCity(city) {
+    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`).then( response => response.json())
 
-    colocarDadosNaTela(dados);
+    putDataOnScreen(data);
 }
 
 
-const input = document.querySelector(".input-cidade");
+const input = document.querySelector(".search-city");
 
 input.addEventListener("keyup", function(event){
     if(event.keyCode === 13) {
-        const cidade = document.querySelector(".input-cidade").value;
-        buscarCidade(cidade);
+        const city = document.querySelector(".search-city").value;
+        searchCity(city);
     }
 }) 
 
-function cliqueiNoBotao() {
-    const cidade = document.querySelector(".input-cidade").value;
+function iClickedSearch() {
+    const city = document.querySelector(".search-city").value;
 
-    buscarCidade(cidade);
+    searchCity(city);
 
 }
 
